@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1>Typing Speed Test</h1>
+        <p class="subtitle">Type the passage below as fast and accurately as you can.</p>
+      </header>
+
+      <section class="stats" aria-label="Live statistics">
+        <div class="stat">
+          <span class="stat-value" id="wpm">0</span>
+          <span class="stat-label">WPM</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="accuracy">100</span>
+          <span class="stat-label">Accuracy</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="timer">60</span>
+          <span class="stat-label">Seconds</span>
+        </div>
+      </section>
+
+      <section class="test-area" aria-label="Typing test">
+        <p class="passage" id="passage" aria-live="polite"></p>
+        <textarea
+          id="input"
+          class="input"
+          rows="4"
+          spellcheck="false"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          placeholder="Start typing here..."
+          aria-label="Typing input"
+        ></textarea>
+      </section>
+# GONG : New test
+
+      <section class="controls">
+        <button type="button" id="restart" class="btn btn-primary">New test</button>
+        <label class="duration-picker">
+          Duration
+          <select id="duration">
+            <option value="30">30s</option>
+            <option value="60" selected>60s</option>
+            <option value="120">120s</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="results hidden" id="results" aria-live="polite">
+        <h2>Test complete</h2>
+        <p>
+          You typed <strong id="result-wpm">0</strong> WPM with
+          <strong id="result-accuracy">0</strong>% accuracy.
+        </p>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
