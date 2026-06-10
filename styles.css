@@ -1,3 +1,5 @@
+/* Pseudo-kelas CSS :root cocok dengan elemen akar dari pohon yang mewakili dokumen. Dalam HTML, :root mewakili elemen <html> dan identik dengan selektor html, kecuali bahwa spesifisitasnya (0-1-0) lebih tinggi daripada html (0-0-1). */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:root */
 :root {
   --bg: #0f1419;
   --surface: #1a2332;
