@@ -8,7 +8,9 @@ export const PASSAGES = [
   "The best time to plant a tree was twenty years ago. The second best time is now.",
   "Learning to touch type is one of the highest leverage skills for anyone who works on a computer.",
 ];
-
+//Deklarasi `export` digunakan untuk mengekspor nilai dari modul JavaScript. Nilai yang diekspor kemudian dapat diimpor ke program lain dengan deklarasi `import` atau impor dinamis. Nilai dari binding yang diimpor dapat berubah di modul yang mengekspornya — ketika sebuah modul memperbarui nilai binding yang diekspornya, pembaruan tersebut akan terlihat pada nilai yang diimpor.
+//Untuk menggunakan deklarasi `export` dalam file sumber, file tersebut harus diinterpretasikan oleh runtime sebagai modul. Dalam HTML, ini dilakukan dengan menambahkan `type="module"` ke tag `<script>`, atau dengan diimpor oleh modul lain. Modul secara otomatis diinterpretasikan dalam mode ketat.
+//sumbernya : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export
 export function randomPassage() {
   return PASSAGES[Math.floor(Math.random() * PASSAGES.length)];
 }
