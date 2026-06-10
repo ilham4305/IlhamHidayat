@@ -24,6 +24,9 @@ let timerId = null;
 let started = false;
 let finished = false;
 
+//  Di SugarCube, fungsi `setPageElement()` merender isi sebuah bagian ke dalam sebuah elemen berdasa/rkan id-nya.
+//Event ":passagedisplay" digunakan dalam contoh ini untuk memastikan bahwa bagian tersebut telah dirender sebelum tindakan dilakukan. Memanggil fungsi `setPageElement()` di dalam event listener jQuery kemudian merender bagian lain ke dalam elemen yang sudah ada.
+//sumbernya : https://twinery.org/cookbook/passagetoelement/sugarcube/sugarcube_passagetoelement.html
 function renderPassage() {
   const typed = inputEl.value;
   passageEl.innerHTML = "";
@@ -33,6 +36,8 @@ function renderPassage() {
     span.classList.add("char");
     span.textContent = passage[i];
 
+   // Properti `classList` yang hanya dapat dibaca pada antarmuka `Element` berisi koleksi `DOMTokenList` yang mewakili atribut kelas elemen. Ini kemudian dapat digunakan untuk memanipulasi daftar kelas. Menggunakan `classList` adalah alternatif yang nyaman untuk mengakses daftar kelas elemen sebagai string yang dipisahkan spasi melalui `element.className`. 
+    // sumbernya : https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
     if (i < typed.length) {
       span.classList.add(typed[i] === passage[i] ? "correct" : "incorrect");
     } else if (i === typed.length) {
@@ -40,7 +45,8 @@ function renderPassage() {
     } else {
       span.classList.add("pending");
     }
-
+// Metode appendChild() dari antarmuka Node menambahkan sebuah node ke akhir daftar anak dari node induk yang ditentukan. Catatan: Jika anak yang diberikan adalah referensi ke node yang sudah ada dalam dokumen, appendChild() akan memindahkannya dari posisi saat ini ke posisi baru.
+  // sumbernya : https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
     passageEl.appendChild(span);
   }
 }
@@ -52,7 +58,8 @@ function countStats() {
   for (let i = 0; i < typed.length; i++) {
     if (typed[i] === passage[i]) correct++;
   }
-
+// Deklarasi `const` mendeklarasikan variabel lokal yang terlingkup dalam blok. Nilai konstanta tidak dapat diubah melalui penugasan ulang menggunakan operator penugasan, tetapi jika konstanta tersebut berupa objek, propertinya dapat ditambahkan, diperbarui, atau dihapus.
+//sumberny : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
   const accuracy = typed.length === 0 ? 100 : Math.round((correct / typed.length) * 100);
   const minutes = (totalDuration - timeLeft) / 60 || 1 / 60;
   const words = correct / 5;
@@ -113,12 +120,17 @@ function resetTest() {
   inputEl.focus();
 }
 
+// Metode addEventListener() dari antarmuka EventTarget mengatur sebuah fungsi yang akan dipanggil setiap kali peristiwa yang ditentukan dikirimkan ke target.
+//Target umum adalah Element, atau anak-anaknya, Document, dan Window, tetapi target dapat berupa objek apa pun yang mendukung peristiwa (seperti IDBRequest).
+//sumbernya : https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
 inputEl.addEventListener("input", () => {
   if (finished) return;
   startTimer();
   renderPassage();
   updateStats();
-
+  
+//Properti data length dari nilai String berisi panjang string dalam satuan kode UTF-16.
+//sumbernya : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length
   if (inputEl.value.length >= passage.length) {
     endTest();
   }
