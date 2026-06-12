@@ -21,7 +21,8 @@
 *::after {
   box-sizing: border-box;
 }
-
+/*Properti CSS `box-sizing` mengatur cara penghitungan total lebar dan tinggi suatu elemen.  */
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-sizing  */
 body {
   margin: 0;
   min-height: 100vh;
@@ -30,17 +31,31 @@ body {
   color: var(--text);
   line-height: 1.5;
 }
+/*Properti CSS `margin`, singkatan dari CSS, mengatur area margin di keempat sisi suatu elemen.  */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/margin */
+
+/*Properti `min-width` dan `max-width` digunakan untuk mengatur lebar minimum dan maksimum suatu elemen.*/
+/*Properti `min-height` dan `max-height` digunakan untuk mengatur tinggi minimum dan maksimum suatu elemen. */
+/*8 SUMBER : https://www.w3schools.com/css/css_height_width_min_max.asp */
+
 
 .app {
   max-width: 760px;
   margin: 0 auto;
   padding: 2.5rem 1.25rem 3rem;
 }
+/*Properti CSS `padding` mengatur area padding di keempat sisi elemen sekaligus.*/
+/* sumber : http://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/padding*/
 
 .header {
   text-align: center;
   margin-bottom: 2rem;
 }
+/*Properti CSS `text-align` mengatur perataan horizontal konten sebaris di dalam elemen blok atau kotak sel tabel. Artinya, properti ini bekerja seperti `vertical-align` tetapi dalam arah horizontal.*/
+/* sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-align */
+
+/*Properti CSS `margin-bottom` mengatur area margin di bagian bawah suatu elemen. Nilai positif menempatkannya lebih jauh dari elemen tetangganya, sedangkan nilai negatif menempatkannya lebih dekat.*/
+/* sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/margin-bottom */
 
 .header h1 {
   margin: 0 0 0.5rem;
@@ -48,6 +63,14 @@ body {
   font-weight: 700;
   letter-spacing: -0.02em;
 }
+/* Properti CSS `font-size` mengatur ukuran font. Mengubah ukuran font juga memperbarui ukuran unit `<length>` yang relatif terhadap ukuran font, seperti `em`, `ex`, dan sebagainya.*/
+/* sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-size*/
+
+/*Properti CSS `font-weight` mengatur ketebalan (atau kekenyalan) font. Ketebalan yang tersedia bergantung pada `font-family` yang saat ini diatur.*/
+/* sumber ; https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-weight*/
+
+/*Properti CSS `letter-spacing` mengatur jarak antar karakter teks. Nilai ini ditambahkan ke jarak alami antar karakter saat teks ditampilkan. Nilai positif `letter-spacing` akan membuat karakter lebih berjauhan, sedangkan nilai negatif `letter-spacing` akan membuat karakter lebih berdekatan.*/
+/* sumber : http://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/letter-spacing*/
 
 .subtitle {
   margin: 0;
@@ -60,6 +83,11 @@ body {
   gap: 1rem;
   margin-bottom: 1.75rem;
 }
+/*Properti CSS `display` menentukan apakah suatu elemen diperlakukan sebagai blok atau kotak sebaris, serta tata letak yang digunakan untuk elemen anaknya, seperti `flow layout`, `grid`, atau `flex`.*/
+/* sumber:https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display*/
+
+/*Properti CSS grid-template-columns mendefinisikan nama baris dan fungsi pengaturan ukuran kolom grid.*/
+/* sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid-template-columns*/
 
 .stat {
   background: var(--surface);
@@ -68,6 +96,14 @@ body {
   padding: 1rem;
   text-align: center;
 }
+/* Properti CSS `background` yang disingkat mengatur semua properti gaya latar belakang sekaligus, seperti warna, gambar, asal, ukuran, dan metode pengulangan.*/
+/* sumber: http://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background*/
+
+/* Properti CSS `border-radius` membulatkan sudut tepi luar suatu elemen. Anda dapat mengatur satu radius untuk membuat sudut melingkar, atau dua radius untuk membuat sudut elips.*/
+/* sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-radius*/
+
+/*Properti CSS `text-align` mengatur perataan horizontal konten sebaris di dalam elemen blok atau kotak sel tabel. Artinya, properti ini bekerja seperti `vertical-align` tetapi dalam arah horizontal.*/
+/*sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-align*/
 
 .stat-value {
   display: block;
@@ -76,6 +112,8 @@ body {
   font-variant-numeric: tabular-nums;
   color: var(--accent);
 }
+/* Properti CSS `font-variant-numeric` mengontrol penggunaan glif alternatif untuk angka, pecahan, dan penanda ordinal.*/
+/* sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric*/
 
 .stat-label {
   font-size: 0.8rem;
@@ -83,6 +121,11 @@ body {
   letter-spacing: 0.06em;
   color: var(--muted);
 }
+/*Properti CSS `text-transform` menentukan cara mengubah huruf teks suatu elemen menjadi huruf kapital. Properti ini dapat digunakan untuk membuat teks muncul dalam huruf besar semua, huruf kecil semua, atau setiap kata diawali dengan huruf kapital. Properti ini juga dapat membantu meningkatkan keterbacaan untuk Ruby.*/
+/* sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-transform*/
+
+/*Properti CSS `letter-spacing` mengatur jarak antar karakter teks. Nilai ini ditambahkan ke jarak alami antar karakter saat teks ditampilkan. Nilai positif `letter-spacing` akan membuat karakter lebih berjauhan, sedangkan nilai negatif `letter-spacing` akan membuat karakter lebih berdekatan.*/
+/*sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/letter-spacing*/
 
 .test-area {
   background: var(--surface);
